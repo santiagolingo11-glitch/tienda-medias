@@ -14,15 +14,144 @@
     }
 
     body {
-      background-color: #f5f5f5;
+      background-color: #f4f4f4;
       color: #333;
+    }
+
+    /* Cabecera */
+    header {
+      background-color: #222;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 28px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 16px;
+    }
+
+    nav a:hover {
+      color: #ffcc00;
+    }
+
+    /* Contenido principal */
+    main {
+      max-width: 1100px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    main h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 32px;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 25px;
+    }
+
+    .producto {
+      background-color: white;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .producto h3 {
+      margin: 15px 0 10px;
+    }
+
+    .precio {
+      font-size: 20px;
+      font-weight: bold;
+      color: #e63946;
+      margin-bottom: 15px;
+    }
+
+    .producto button {
+      background-color: #222;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 15px;
+    }
+
+    .producto button:hover {
+      background-color: #e63946;
+    }
+
+    /* Pie de página */
+    footer {
+      background-color: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
     }
   </style>
 </head>
 <body>
 
-  <h1>Bienvenido a SOCKS STORE</h1>
-  <p>Tienda de medias</p>
+  <!-- Cabecera -->
+  <header>
+    <h1>SOCKS STORE</h1>
+    <nav>
+      <a href="#">Inicio</a>
+      <a href="#">Productos</a>
+      <a href="#">Contacto</a>
+    </nav>
+  </header>
+
+  <!-- Contenido -->
+  <main>
+    <h2>Nuestras Medias</h2>
+
+    <div class="productos">
+      <div class="producto">
+        <h3>Media Deportiva</h3>
+        <p class="precio">$15.00</p>
+        <button>Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Media de Algodón</h3>
+        <p class="precio">$12.00</p>
+        <button>Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Media Térmica</h3>
+        <p class="precio">$18.00</p>
+        <button>Agregar al carrito</button>
+      </div>
+
+      <div class="producto">
+        <h3>Media Invisible</h3>
+        <p class="precio">$10.00</p>
+        <button>Agregar al carrito</button>
+      </div>
+    </div>
+  </main>
+
+  <!-- Pie de página -->
+  <footer>
+    <p>© 2026 Socks Store - Todos los derechos reservados</p>
+  </footer>
 
 </body>
 </html>
